@@ -58,7 +58,6 @@ namespace ScannerV2
                     string fileHash = GetMD5HashFromFile(cpy); // generates the hash for the task
                     Console.WriteLine("\nStarted Scanning: {0} ({1})", file.Split('\\').Last(), fileHash); // warns the user the scan has started
                     bool inFile = File.ReadLines("master.md5").Contains(fileHash); // checks the master list for the hash
-                    Console.Clear(); // clears console
                     if (inFile) // if the hash is in the master file
                     {
                         while (true) // start loop
